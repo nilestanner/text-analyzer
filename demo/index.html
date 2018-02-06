@@ -1,0 +1,30 @@
+<html>
+  <header>
+    <title>Text Analyzer</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="../index.js"></script>
+    <script src="../sources/picture-of-dorian-gray.js"></script>
+    <script src="../sources/sense-and-sensibility.js"></script>
+    <script src="main.js"></script>
+    <style media="screen">
+      #analyzer {
+        width: 700px;
+        margin: 20px auto;
+      }
+    </style>
+  </header>
+  <body>
+    <div id="analyzer" class="pure-g">
+      <textarea id="textInput" class="pure-u-1" type="text" name="" value="" rows="15" cols="50" placeholder="Paste Your text here"></textarea>
+      <button class="pure-button pure-button-primary pure-u-1" type="button" name="button" onClick="process()">Process</button>
+      <button class="pure-button pure-u-1-2" type="button" name="button" onClick="process('dorian')">Process Picture of Dorian Gray</button>
+      <button class="pure-button pure-u-1-2" type="button" name="button" onClick="process('sense')">Process Sense and Sensibility</button>
+      <div class="pure-u-1">
+        <br>
+        Check the console for the result.
+      </div>
+    </div>
+
+
+  </body>
+</html>

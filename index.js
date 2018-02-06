@@ -26,9 +26,8 @@ textAnalyzer.analyzer = (input) => {
   words.forEach((word) => {
     addToMap(word);
   });
-  const hashKeys = Object.keys(hash);
-  output.count = hashKeys.length;
-  output.words = hashKeys.map((key) => {
+  output.count = words.length;
+  output.words = Object.keys(hash).map((key) => {
     hash[key].percent = hash[key].count/output.count;
     return hash[key];
   }).sort((a, b) => {
